@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="./Assets/cards/Untitled design.png" type="image/png">
   <link rel="apple-touch-icon" href="./Assets/cards/Untitled design.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -32,9 +34,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Delivery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-section">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order-form">Delivery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -54,7 +56,7 @@
         <div class="carousel-caption text-center d-md-block">
           <h2 class="display-3 fw-bold" style="font-family: 'Pacifico', cursive; padding-left: 30px;">Freshly Baked Every Day</h2>
           <p class="lead">Experience the magic of homemade goodness at Sumita's Bakery.</p>
-          <a href="#" class="btn btn-lg btn-warning fw-semibold shadow-sm mt-3">Order Now</a>
+          <a href="#order-form" class="btn btn-lg btn-warning fw-semibold shadow-sm mt-3">Order Now</a>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="4000">
@@ -84,7 +86,7 @@
           <div class="card-body">
             <h5 class="card-title">Vanilla Cake</h5>
             <p class="card-text">Delicious and fluffy vanilla cake perfect for any occasion.</p>
-            <a href="#" class="btn btn-primary">Order Now</a>
+            <a href="#order-form" class="btn btn-primary">Order Now</a>
           </div>
         </div>
       </div>
@@ -94,7 +96,7 @@
           <div class="card-body">
             <h5 class="card-title">Chocolate Delight</h5>
             <p class="card-text">Rich and moist chocolate cake to satisfy your cravings.</p>
-            <a href="#" class="btn btn-primary">Order Now</a>
+            <a href="#order-form" class="btn btn-primary">Order Now</a>
           </div>
         </div>
       </div>
@@ -104,7 +106,7 @@
           <div class="card-body">
             <h5 class="card-title">Red Velvet</h5>
             <p class="card-text">Creamy and elegant red velvet cake for special moments.</p>
-            <a href="#" class="btn btn-primary">Order Now</a>
+            <a href="#order-form" class="btn btn-primary">Order Now</a>
           </div>
         </div>
       </div>
@@ -114,7 +116,7 @@
           <div class="card-body">
             <h5 class="card-title">Fruit Fusion</h5>
             <p class="card-text">A burst of fresh fruits on a soft sponge cake.</p>
-            <a href="#" class="btn btn-primary">Order Now</a>
+            <a href="#order-form" class="btn btn-primary">Order Now</a>
           </div>
         </div>
       </div>
@@ -137,7 +139,7 @@
   </section>
 
   <!-- Text-Image Section -->
-  <section class="about-bakery-section py-5 bg-light mt-5">
+  <section class="about-bakery-section py-5 bg-light mt-5" id="about-section">
     <div class="container">
       <h1 class="text-center mb-5 custom-brand-name" style="text-decoration: underline;">Welcome to Sumita's Bakery</h1>
       <div class="row align-items-center mb-5">
@@ -166,6 +168,190 @@
       </div>
     </div>
   </section>
+
+  <!-- Custom form for custom cake -->
+ <!-- Parallax Form Section -->
+<section class="parallax-form-section d-flex align-items-center justify-content-center text-white" id="order-form">
+  <div class="container p-5 rounded shadow bg-dark bg-opacity-75">
+    <h2 class="text-center mb-4" style="font-family: Pacifico, cursive;">Order a Custom Cake</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="needs-validation" novalidate>
+      
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="45c7d013-adcf-4fc5-af89-49615ea52442">
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="validCustom01" class="form-label">Your Name</label>
+          <input type="text" id="validCustom01" name="name" class="form-control" placeholder="Enter your name" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label for="validCustom02" class="form-label">Email</label>
+          <input type="email" id="validCustom02" name="email" class="form-control" placeholder="Enter your email" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="validCustom03" class="form-label">Phone Number</label>
+          <input type="tel" id="validCustom03" name="phone" class="form-control" placeholder="Enter your phone number" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label for="validCustom04" class="form-label">Preferred Delivery Date</label>
+          <input type="date" id="validCustom04" name="date" class="form-control" required>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="validCustom05" class="form-label">Cake Type</label>
+        <select class="form-select" id="validCustom05" name="cake_type" required>
+          <option selected disabled>Choose a cake</option>
+          <option>Chocolate</option>
+          <option>Vanilla</option>
+          <option>Red Velvet</option>
+          <option>Butterscotch</option>
+        </select>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+    
+
+      <div class="mb-3">
+        <div class="row">
+        <div class="col-12 col-md-6">
+        <label for="validCustom06" class="form-label">Special Instructions</label>
+        <textarea class="form-control" id="validCustom06" name="instructions" rows="4" placeholder="E.g., eggless, message on cake, allergies, etc."></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        </div>
+         
+        <div class="col-12 col-md-6">
+        <label for="validCustom07" class="form-label">Delivery address</label>
+        <textarea class="form-control" id="validCustom07" name="instructions" rows="4" placeholder="Enter your address.."></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        </div>
+
+        </div>
+      </div>
+  <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-light btn-lg">Place Order</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Bootstrap Validation Script -->
+<script>
+(function () {
+  'use strict'
+  window.addEventListener('load', function () {
+    var forms = document.getElementsByClassName('needs-validation')
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+})()
+</script>
+
+</section>
+
+
+<!-- contact section -->
+<!-- Contact Section with Cards and Map -->
+<section id="contact" class="py-5 bg-bisque">
+  <div class="container">
+    <h2 class="text-center mb-4" style="font-family:Pacifico, cursive; text-decoration: underline;">Get in Touch</h2>
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- Contact Cards -->
+      <div class="col-lg-6 d-flex flex-column gap-3">
+        <!-- Address Card -->
+        <div class="card shadow h-100">
+          <div class="card-body d-flex align-items-center">
+            <i class="bi bi-geo-alt-fill fs-3 text-primary me-3"></i>
+            <div>
+              <h5 class="card-title mb-1">Address</h5>
+              <p class="card-text">123 Sweet Street, Cake City, 456789</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="card shadow h-100">
+          <div class="card-body d-flex align-items-center">
+            <i class="bi bi-telephone-fill fs-3 text-success me-3"></i>
+            <div>
+              <h5 class="card-title mb-1">Phone</h5>
+              <p class="card-text">+91 98765 43210</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Card -->
+        <div class="card shadow h-100">
+          <div class="card-body d-flex align-items-center">
+            <i class="bi bi-envelope-fill fs-3 text-danger me-3"></i>
+            <div>
+              <h5 class="card-title mb-1">Email</h5>
+              <p class="card-text">sumitasbakery@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- YouTube Card -->
+        <div class="card shadow h-100">
+          <div class="card-body d-flex align-items-center">
+            <i class="bi bi-youtube fs-3 text-danger me-3"></i>
+            <div>
+              <h5 class="card-title mb-1">YouTube</h5>
+              <a href="https://www.youtube.com/@yourchannel" target="_blank" class="card-text text-decoration-none text-dark">youtube.com/@yourchannel</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram Card -->
+        <div class="card shadow h-100">
+          <div class="card-body d-flex align-items-center">
+            <i class="bi bi-instagram fs-3 text-warning me-3"></i>
+            <div>
+              <h5 class="card-title mb-1">Instagram</h5>
+              <a href="https://www.instagram.com/yourprofile" target="_blank" class="card-text text-decoration-none text-dark">@yourprofile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="col-lg-6">
+        <div class="ratio ratio-4x3 rounded shadow">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3719.1149472295906!2d81.61161907533912!3d21.227289980472232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEzJzM4LjIiTiA4McKwMzYnNTEuMSJF!5e0!3m2!1sen!2sin!4v1748704661842!5m2!1sen!2sin" width="600"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-dark text-light pt-4 pb-2">
@@ -216,6 +402,9 @@
 <!-- ideas -->
 <!-- google analytics, microsoft calrity, typeform,luma -->
 <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+
+
+  </script>
 </body>
 </html>
