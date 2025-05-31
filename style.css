@@ -65,6 +65,8 @@
 
 .card .btn {
   transition: background-color 0.3s ease, color 0.3s ease;
+  align-items: center;
+  
 }
 
 .card .btn:hover {
@@ -116,4 +118,12 @@
   transform: rotate(-2deg) scale(1.03);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
+.parallax-form-section {
+  background-image: url('./Assets/chocolate-cake-decorated-with-red-white-glaze.webp'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  min-height: 100vh;
+  position: relative;
+}
