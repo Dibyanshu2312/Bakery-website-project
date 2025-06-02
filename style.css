@@ -119,7 +119,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .parallax-form-section {
-  background-image: url('./Assets/chocolate-cake-decorated-with-red-white-glaze.webp'); /* Replace with your image path */
+  background-image: url('https://res.cloudinary.com/dcchyh1qi/image/upload/v1748841378/chocolate-cake-decorated-with-red-white-glaze_pzjhao.webp'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
