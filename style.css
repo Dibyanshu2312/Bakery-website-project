@@ -127,4 +127,70 @@
   min-height: 100vh;
   position: relative;
 }
+.card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling */
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* Zoom-in effect */
+}
+
+/* Overlay content */
+.card-body {
+position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
  
+  color: black;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  background-color: bisque;
+}
+
+/* Slide up the card body on hover */
+.card:hover .card-body {
+  transform: translateY(0);
+}
+
+/* Headings and buttons */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.card .btn {
+  margin-top: 0.75rem;
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #ffca2c;
+}
